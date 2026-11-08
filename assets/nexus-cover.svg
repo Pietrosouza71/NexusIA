@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
+  <title id="title">Nexus — Inteligência artificial, com intenção</title>
+  <desc id="description">Capa escura e dourada com uma ilustração orbital conectando inteligência e tecnologia.</desc>
+  <defs>
+    <radialGradient id="glow">
+      <stop offset="0" stop-color="#c9ad76" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#c9ad76" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#ead8ad"/>
+      <stop offset="1" stop-color="#a88a53"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#ead8ad" stroke-opacity=".055"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" rx="24" fill="#080808"/>
+  <rect width="1200" height="630" rx="24" fill="url(#grid)"/>
+  <circle cx="850" cy="315" r="290" fill="url(#glow)"/>
+  <path d="M0 520h1200" stroke="#ead8ad" stroke-opacity=".12"/>
+  <text x="88" y="126" fill="#c9ad76" font-family="Arial, sans-serif" font-size="16" letter-spacing="5">INTELIGÊNCIA ARTIFICIAL · PROJETO CONCEITUAL</text>
+  <text x="84" y="291" fill="#f3f1ec" font-family="Arial, sans-serif" font-size="78" font-weight="600" letter-spacing="-3">Inteligência</text>
+  <text x="84" y="378" fill="#f3f1ec" font-family="Arial, sans-serif" font-size="78" font-weight="600" letter-spacing="-3">artificial, <tspan fill="url(#gold)" font-family="Georgia, serif" font-style="italic" font-weight="400">com intenção.</tspan></text>
+  <text x="88" y="445" fill="#aaa69c" font-family="Arial, sans-serif" font-size="20">Tecnologia que transforma a complexidade em clareza.</text>
+  <g transform="translate(878 315)" fill="none" stroke="url(#gold)">
+    <circle r="174" stroke-opacity=".3"/>
+    <ellipse rx="174" ry="78" transform="rotate(-38)" stroke-opacity=".65"/>
+    <ellipse rx="174" ry="78" transform="rotate(38)" stroke-opacity=".5"/>
+    <circle r="86" stroke-opacity=".45"/>
+    <circle r="48" fill="#11110f" stroke-width="2"/>
+    <path d="M-21-26v52m42-52v52M-20-25 20 25M20-25 5-7" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="0" cy="-174" r="5" fill="#ead8ad" stroke="none"/>
+    <circle cx="142" cy="101" r="5" fill="#ead8ad" stroke="none"/>
+    <circle cx="-142" cy="-101" r="5" fill="#ead8ad" stroke="none"/>
+  </g>
+  <text x="88" y="575" fill="#858178" font-family="Arial, sans-serif" font-size="14" letter-spacing="3">NEXUS · EXPERIÊNCIA DIGITAL &amp; IA</text>
+  <text x="1112" y="575" fill="#858178" font-family="Arial, sans-serif" font-size="14" text-anchor="end">01 — 04</text>
+</svg>
