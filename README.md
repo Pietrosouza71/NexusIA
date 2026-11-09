@@ -2,77 +2,72 @@
   <img src="assets/nexus-cover.svg" alt="Nexus — inteligência artificial, com intenção" width="100%">
 
   # Nexus
+
   **Inteligência artificial, com intenção.**
 
-  Uma experiência web conceitual que explora como IA, atendimento e design podem se aproximar de forma clara e responsável.
+  Uma experiência digital conceitual que aproxima inteligência artificial, atendimento e design — com clareza, cuidado e transparência.
 
-  <a href="https://pietrosouza71.github.io/NexusIA/">Ver demonstração</a>
-  ·
-  <a href="https://github.com/Pietrosouza71/NexusIA">Código-fonte</a>
+  <a href="https://pietrosouza71.github.io/NexusIA/"><strong>Acessar demonstração</strong></a>
+  &nbsp;·&nbsp;
+  <a href="https://github.com/Pietrosouza71/NexusIA">Explorar o código</a>
 
-  ![Node.js](https://img.shields.io/badge/Node.js-18.18%2B-339933?logo=nodedotjs&logoColor=white)
-  ![Express](https://img.shields.io/badge/Express-4.21-000000?logo=express&logoColor=white)
-  ![JavaScript](https://img.shields.io/badge/JavaScript-ES2022-F7DF1E?logo=javascript&logoColor=000)
-  ![License](https://img.shields.io/badge/licen%C3%A7a-sem%20licen%C3%A7a-lightgrey)
+  <br>
+
+  <a href="https://github.com/Pietrosouza71/NexusIA/actions/workflows/pages.yml"><img src="https://github.com/Pietrosouza71/NexusIA/actions/workflows/pages.yml/badge.svg" alt="Status dos testes e publicação"></a>
+  <img src="https://img.shields.io/badge/Node.js-18.18%2B-339933?logo=nodedotjs&logoColor=white" alt="Node.js 18.18 ou superior">
+  <img src="https://img.shields.io/badge/Express-4-000000?logo=express&logoColor=white" alt="Express 4">
+  <img src="https://img.shields.io/badge/JavaScript-ES2022-F7DF1E?logo=javascript&logoColor=000" alt="JavaScript ES2022">
 </div>
 
-## Sobre o projeto
+## Sobre
 
-Nexus é um projeto de portfólio — não é uma empresa nem um serviço comercial real. A landing page apresenta o conceito de uma plataforma de inteligência artificial e uma interface de atendimento demonstrativa, em uma identidade visual escura com detalhes champagne.
+Nexus é um projeto de portfólio, não uma empresa ou serviço comercial. A interface apresenta o conceito de uma plataforma de IA e uma demonstração de atendimento em uma identidade visual escura, com detalhes em champagne.
 
-O projeto combina uma interface responsiva em HTML, CSS e JavaScript nativo com um servidor Node.js/Express. O servidor inclui uma rota de conversa preparada para provedores compatíveis com a API de Chat Completions da OpenAI. A integração só responde quando uma chave é configurada no ambiente do servidor; a página nunca inventa respostas de IA quando a integração está indisponível.
+A experiência combina uma landing page responsiva em HTML, CSS e JavaScript nativo com um servidor Node.js/Express. A API de conversa é compatível com provedores que implementam Chat Completions e só responde quando configurada no servidor — sem simular respostas quando a integração está indisponível.
 
-## Funcionalidades
+## Destaques
 
-- Landing page responsiva com navegação por seções, menu móvel e formulário de contato demonstrativo.
-- Identidade visual original com ilustração orbital em CSS, animações suaves e suporte a `prefers-reduced-motion`.
-- Perguntas frequentes com respostas educativas predefinidas, separadas da conversa com IA.
-- Demonstração de chat que consulta o estado da API e deixa o envio desabilitado quando não configurada.
-- Backend Express com validação de entrada, limite de requisições e cabeçalhos de segurança via Helmet.
-- Serviço compatível com APIs de Chat Completions, com segredo mantido no servidor e respostas de erro controladas.
-- Testes automatizados para validação e integração do serviço de IA, sem chamadas externas.
+- Layout responsivo, navegação por seções e menu adaptado para dispositivos móveis.
+- Identidade visual original, ilustração orbital em CSS e animações com suporte a `prefers-reduced-motion`.
+- FAQ educativo, separado da conversa com IA.
+- Chat demonstrativo que verifica o estado da API e informa quando o serviço não está configurado.
+- Backend com validação de entrada, limite de requisições e cabeçalhos de segurança via Helmet.
+- Testes automatizados sem chamadas a serviços externos.
 
-> **Limite da publicação:** o GitHub Pages hospeda somente os arquivos estáticos em `public/`. Ele não executa o servidor Express. Portanto, na demonstração pública a interface de chat permanece desativada até que o backend seja hospedado separadamente e configurado.
+> **Sobre a demonstração:** o GitHub Pages publica somente a interface estática. O servidor Express não roda no Pages; por isso, o chat só fica disponível quando um backend é hospedado e configurado separadamente.
 
 ## Tecnologias
 
-| Camada | Tecnologias |
+| Área | Ferramentas |
 | --- | --- |
 | Interface | HTML5, CSS3 e JavaScript nativo |
-| Servidor | Node.js 18.18+ e Express 4 |
-| Integração opcional | API compatível com OpenAI Chat Completions |
+| Backend | Node.js 18.18+ e Express 4 |
+| IA opcional | API compatível com OpenAI Chat Completions |
 | Segurança | Helmet, `express-rate-limit` e validação de entrada |
 | Testes | `node:test` |
+| Publicação | GitHub Pages e GitHub Actions |
 
-## Executar localmente
+## Começar
 
 **Requisitos:** Node.js 18.18 ou superior e npm.
 
 ```bash
 npm install
+npm run dev
 ```
 
-Para executar apenas a versão estática, abra `public/index.html` no navegador. A demonstração de chat ficará desativada.
+Abra `http://localhost:3000`. Para habilitar respostas de IA, copie `.env.example` para `.env` e configure as variáveis:
 
-Para iniciar a aplicação completa com o servidor:
+```dotenv
+OPENAI_API_KEY=sua_chave
+OPENAI_MODEL=gpt-4o-mini
+OPENAI_BASE_URL=https://api.openai.com/v1
+PORT=3000
+```
 
-1. Copie `.env.example` para `.env` (no PowerShell: `Copy-Item .env.example .env`).
-2. Se desejar habilitar respostas de IA, configure a chave válida no arquivo `.env` local:
+Sem uma chave de API, o servidor inicia normalmente, mas a conversa com IA permanece indisponível. **Nunca publique o arquivo `.env` ou chaves de API.**
 
-   ```dotenv
-   OPENAI_API_KEY=sua_chave
-   OPENAI_MODEL=gpt-4o-mini
-   OPENAI_BASE_URL=https://api.openai.com/v1
-   PORT=3000
-   ```
-
-3. Inicie o servidor e abra `http://localhost:3000`:
-
-   ```bash
-   npm run dev
-   ```
-
-**Nunca** compartilhe ou publique `.env` ou chaves de API. O arquivo está ignorado pelo Git; `.env.example` contém apenas nomes e valores de exemplo.
+Para abrir somente a versão estática, use `public/index.html`; nesse modo, o chat fica desativado.
 
 ## Testes
 
@@ -80,39 +75,24 @@ Para iniciar a aplicação completa com o servidor:
 npm test
 ```
 
+Os testes também são executados automaticamente antes de cada publicação. Se algum teste falhar, o deploy não continua.
+
 ## Publicação
 
-A versão estática será publicada no [GitHub Pages](https://pietrosouza71.github.io/NexusIA/) após a execução bem-sucedida do workflow e a ativação do Pages no repositório. O workflow publica a pasta `public/` quando há alterações na branch `main`. O backend não faz parte dessa publicação; para habilitar o chat, implante `src/server.js` em um serviço Node.js e configure os segredos nesse serviço.
+Cada atualização na branch `main` executa os testes e, se estiverem aprovados, publica `public/` no [GitHub Pages](https://pietrosouza71.github.io/NexusIA/). O mesmo fluxo pode ser iniciado manualmente pela aba **Actions** do repositório.
 
-## Estrutura do projeto
+## Estrutura
 
 ```text
-NexusIA/
-├── .github/workflows/pages.yml  # Publicação do site no GitHub Pages
-├── assets/nexus-cover.svg       # Capa do README
-├── public/
-│   ├── assets/nexus-mark.svg    # Ícone da marca
-│   ├── css/
-│   │   ├── premium.css          # Estilos da landing page atual
-│   │   └── style.css            # Estilos do protótipo anterior, não carregados
-│   ├── js/
-│   │   ├── site.js              # Interações da landing page atual
-│   │   ├── faq.js               # FAQ do protótipo anterior, não carregado
-│   │   └── script.js            # Script do protótipo anterior, não carregado
-│   └── index.html
-├── src/
-│   ├── config/knowledgeBase.js
-│   ├── routes/chatRoutes.js
-│   ├── services/aiService.js
-│   ├── utils/validation.js
-│   └── server.js
-├── test/chat.test.js
-├── .env.example
-├── .gitignore
+.
+├── .github/workflows/pages.yml  # Testes e publicação
+├── assets/nexus-cover.svg       # Capa deste README
+├── public/                      # Site estático publicado
+├── src/                         # Servidor, rotas e integração de IA
+├── test/                        # Testes automatizados
+├── .env.example                 # Exemplo de configuração local
 └── package.json
 ```
-
-Os arquivos do protótipo anterior foram mantidos para não remover conteúdo existente; a landing page atual carrega `premium.css` e `site.js`.
 
 ## Desenvolvedor
 
@@ -120,4 +100,4 @@ Os arquivos do protótipo anterior foram mantidos para não remover conteúdo ex
 
 ## Licença
 
-Este repositório não inclui uma licença. Todos os direitos são reservados; a publicação pública no GitHub não concede, por si só, permissão para reutilizar o código ou os recursos.
+Este repositório não inclui uma licença. A publicação pública no GitHub não concede, por si só, permissão para reutilizar o código ou os recursos.
