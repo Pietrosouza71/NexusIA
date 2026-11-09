@@ -6,9 +6,9 @@
 
   Uma experiência web conceitual que explora como IA, atendimento e design podem se aproximar de forma clara e responsável.
 
-  <a href="https://pietrosouza71.github.io/NexusIA/">Ver demonstração</a>
+  <a href="https://pietrosouza71.github.io/nexus-ai-portfolio/">Ver demonstração</a>
   ·
-  <a href="https://github.com/Pietrosouza71/NexusIA">Código-fonte</a>
+  <a href="https://github.com/Pietrosouza71/nexus-ai-portfolio">Código-fonte</a>
 
   ![Node.js](https://img.shields.io/badge/Node.js-18.18%2B-339933?logo=nodedotjs&logoColor=white)
   ![Express](https://img.shields.io/badge/Express-4.21-000000?logo=express&logoColor=white)
